@@ -1,8 +1,12 @@
-# React + Vite
+This is a simple crypto Trading platform build using React.
+<div align="center">
+  <img alt="Demo" src="./public/s1.png" />
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img alt="Demo" src="./public/s2.png" />
+</div>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
+  <img alt="Demo" src="./public/s3.png" />
+</div>
