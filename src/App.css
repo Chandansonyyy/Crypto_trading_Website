@@ -1,14 +1,238 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+@import './components/MetaMaskButton.css';
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  background-color: black;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+}
+
+.navbar .logo h1 {
+  font-size: 1.5rem;
+  color: #ffa500;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  font-size: 1rem;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffa500;
+}
+
+.search-bar {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  height: 2rem;
+  width: 20rem;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  height: 2rem;
+  width: 5rem;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cc8400;
+}
+
+.coins-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.coin-card {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.coin-card:hover {
+  transform: scale(1.05);
+}
+
+.coin-card .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profit {
+  color: #4caf50;
+}
+
+.loss {
+  color: #f44336;
+}
+
+.coin-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.coin-info {
+  text-align: center;
+}
+
+.coin-info .btn-group {
+  margin-bottom: 2rem;
+}
+
+.coin-info .time {
+  font-size: 0.875rem;
+  color: #bdbdbd;
+}
+
+.coin-info .coin-image img {
+  margin: 1rem 0;
+}
+
+.coin-info .coin-name {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.coin-info .coin-price {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.coin-info .coin-profit {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.coin-info .coin-profit .up-arrow {
+  color: #4caf50;
+  margin-right: 0.5rem;
+}
+
+.coin-info .coin-profit .down-arrow {
+  color: #f44336;
+  margin-right: 0.5rem;
+}
+
+.coin-info .market-rank {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.coin-info .coin-desc {
+  margin: 1rem 0;
+}
+
+.chart {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.exchanges-page {
+  padding: 2rem;
+}
+
+.exchanges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.ex-card {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.ex-card:hover {
+  transform: scale(1.05);
+}
+
+.ex-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.ex-card .ex-card-name {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.ex-card .ex-card-volume,
+.ex-card .ex-card-rank {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
 }

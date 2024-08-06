@@ -1,0 +1,18 @@
+/* MetaMaskButton.css */
+
+.metamask-button {
+  padding: 0.4rem 0.6rem; /* Reduced horizontal padding */
+  background-color: #f6851b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Slightly smaller font size */
+  transition: background-color 0.3s ease;
+  white-space: nowrap; /* Ensure the text doesn't wrap */
+  margin-left: 1rem; /* Consistent margin */
+}
+
+.metamask-button:hover {
+  background-color: #e2761b;
+}

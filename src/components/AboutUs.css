@@ -1,0 +1,84 @@
+/* AboutUs.css */
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #1f1f1f;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-us h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffa500;
+}
+
+.about-us p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #bdbdbd;
+}
+
+.about-content {
+  width: 100%;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffa500;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #bdbdbd;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+  .about-us {
+    padding: 1rem;
+  }
+
+  .about-us h1 {
+    font-size: 1.75rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-section p {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about-us {
+    margin: 1rem auto;
+  }
+
+  .about-us h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1rem;
+  }
+
+  .about-section p {
+    font-size: 0.75rem;
+  }
+}

@@ -1,78 +1,131 @@
-.coin-detail{
-  padding-left: 120px;
-  padding-top: 50px;
-}
-.time{
-    font-weight: bold;
-    color: beige;
-}
+/* CoinDetails.css */
 
-.up-arrow {
-  color: rgb(31, 255, 31);
-  margin-top: 2px;
-}
-
-.down-arrow {
-  color: red;
-}
-
-.coin-image img{
-    margin-top: 60px;
-}
-
-.coin-name{
-    font-weight: bold;
-    font-size: 27px;
-    margin-top: 50px;
-}
-.coin-price{
-    font-weight: bold;
-    font-size: 22px;
-    margin-top: 10px;
-   
-}
-.coin-profit{
-    margin-top: 8px;
-    margin-left: 7px;
-    display: flex;
-   
-}
-
-.market-rank{
-    font-weight: bold;
-    font-size: 27px;
-    margin-top: 20px;
-    margin-left: 5px;
-}
-
-.coin-desc p{
-    margin-top: 15px;
-   
-}
-
-.coin-desc {
-    width: 20rem;
-}
-.btn button{
-    height: 2rem;
-    background-color: orange;
-    border: none;
-    width: 5rem;
+.coin-detail {
+    padding: 2rem;
+    background-color: #121212;
+    color: #fff;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+  }
+  
+  .coin-info {
+    margin-bottom: 2rem;
+  }
+  
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
+  }
+  
+  .btn.active, .btn:hover {
+    background-color: #ff7b00;
+  }
+  
+  .coin-overview {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .coin-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  
+  .coin-details {
+    flex-grow: 1;
+  }
+  
+  .coin-name {
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 30px;
-    margin-left: 10px;
-}
-
-.coin-detail{
-  display: flex;
-  justify-content: space-evenly;
-}
-@media only screen and (max-width: 600px) {
-
-   .coin-detail{
-      display: flex;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coin-price {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coin-profit {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coin-profit.profit {
+    color: #4caf50;
+  }
+  
+  .coin-profit.loss {
+    color: #f44336;
+  }
+  
+  .market-rank {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .coin-desc {
+    font-size: 1rem;
+    color: #bdbdbd;
+  }
+  
+  .last-updated {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bdbdbd;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .coin-overview {
       flex-direction: column;
-      padding-left: 30px;
-   }
-}
+      align-items: flex-start;
+    }
+  
+    .coin-image img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .coin-name {
+      font-size: 1.5rem;
+    }
+  
+    .coin-price {
+      font-size: 1.2rem;
+    }
+  
+    .coin-profit {
+      font-size: 1rem;
+    }
+  
+    .market-rank {
+      font-size: 1rem;
+    }
+  
+    .coin-desc {
+      font-size: 0.9rem;
+    }
+  }
+  
