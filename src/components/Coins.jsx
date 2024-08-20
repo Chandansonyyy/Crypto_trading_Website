@@ -42,35 +42,36 @@ const Coins = () => {
             <button className="btn" onClick={() => setCurrency('usd')}>USD</button>
           </div>
 
-          <div className="coins-container">
+          <div className="coins-table">
+            <div className="table-header">
+              <div className="header-cell">#</div>
+              <div className="header-cell">Coin</div>
+              <div className="header-cell">Price</div>
+              <div className="header-cell">24h Change</div>
+              <div className="header-cell">Market Cap</div>
+            </div>
             {coins.filter((data) => {
               if (data === '') return data;
               if (data.name.toLowerCase().includes(search.toLowerCase())) return data;
               return null;
             }).map((coindata, i) => (
-              <CoinCard key={i} coindata={coindata} id={coindata.id} currencySymbol={currencySymbol} />
+              <div key={coindata.id} className="table-row">
+                <div className="row-cell">{i + 1}</div>
+                <div className="row-cell">
+                  <img src={coindata.image} alt={coindata.name} className="coin-logo" />
+                  {coindata.name}
+                </div>
+                <div className="row-cell">{currencySymbol} {coindata.current_price}</div>
+                <div className={`row-cell ${coindata.price_change_percentage_24h > 0 ? 'profit' : 'loss'}`}>
+                  {coindata.price_change_percentage_24h > 0 ? `+${coindata.price_change_percentage_24h.toFixed(2)}` : coindata.price_change_percentage_24h.toFixed(2)}%
+                </div>
+                <div className="row-cell">{currencySymbol} {coindata.market_cap.toLocaleString()}</div>
+              </div>
             ))}
           </div>
         </>
       )}
     </>
-  );
-};
-
-const CoinCard = ({ coindata, currencySymbol, id }) => {
-  const profit = coindata.price_change_percentage_24h > 0;
-
-  return (
-    <Link to={`/coins/${id}`} className="coin-card">
-      <div className="image">
-        <img src={coindata.image} alt={coindata.name} />
-      </div>
-      <div className="name">{coindata.name}</div>
-      <div className="price">{currencySymbol} {coindata.current_price}</div>
-      <div className={`rank ${profit ? 'profit' : 'loss'}`}>
-        {profit ? `+${coindata.price_change_percentage_24h.toFixed(2)}` : coindata.price_change_percentage_24h.toFixed(2)}%
-      </div>
-    </Link>
   );
 };
 
