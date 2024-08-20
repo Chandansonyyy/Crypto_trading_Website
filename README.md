@@ -11,7 +11,11 @@ This is a simple crypto trading platform built using React.
 <div align="center">
   <img alt="Snapshot 1" src="./public/new11.png" />
 </div>
-
+<div align="center">
+  <img alt="Snapshot 2" src="./public/new212.png" />
+</div><div align="center">
+  <img alt="Snapshot 2" src="./public/new2121.png" />
+</div>
 <div align="center">
   <img alt="Snapshot 2" src="./public/new22.png" />
 </div>
